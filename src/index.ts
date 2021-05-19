@@ -199,7 +199,7 @@ client
       new NoobsEmbed()
         .setTitle("Security Help Board")
         .addField("Commands", [...client.commands.keys()].join(", "))
-        .addField("開発者 AI Avalon")
+        .addField("開発者", "AI Avalon")
     );
   })
   .command("ping", async (msg: Message) => {
