@@ -195,7 +195,7 @@ client.on("message", async (message: Message) => {
 
 client
   .command("help", async (msg: Message) => {
-    await msg.channel.send(
+    await msg.reply(
       new NoobsEmbed()
         .setTitle("Security Help Board")
         .addField("Commands", [...client.commands.keys()].join(", "))
