@@ -1,8 +1,7 @@
-import * as fs from "fs";
+import { promises as fs } from "fs";
 import * as path from "path";
 
-export default function save(target: string, val: Array<object>) {
-  fs.writeFile(path.join(__dirname, target), JSON.stringify(val), (e) => {
-    if (e) console.log(e);
-  });
+export default async function save(target: string, val: Array<object>) {
+  await fs.writeFile(path.join(__dirname, target), JSON.stringify(val, null, 2))
+  .catch(console.log);
 }
